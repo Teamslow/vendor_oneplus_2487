@@ -1,0 +1,92 @@
+######################BeiJing#############################################
+# Forcing HOST to listen for a selected protocol
+# 0x00 : Disable Host Listen
+# 0x01 : Enable Host to Listen (A)  for ISO-DEP tech A
+# 0x02 : Enable Host to Listen (B)  for ISO-DEP tech B
+# 0x04 : Enable Host to Listen (F)  for T3T Tag Type Protocol tech F
+# 0x07 : Enable Host to Listen (ABF)for ISO-DEP tech AB & T3T Tag Type Protocol tech F
+# 1941053, Must ensure HOST_LISTEN_TECH_MASK=0x07 for setABFListenTechMask api
+#HOST_LISTEN_TECH_MASK=0x03
+#//disable type F
+
+###############################################################################
+# Force UICC to only listen to the following technology(s).
+# The bits are defined as tNFA_TECHNOLOGY_MASK in nfa_api.h.
+# Default is NFA_TECHNOLOGY_MASK_A | NFA_TECHNOLOGY_MASK_B | NFA_TECHNOLOGY_MASK_F
+# 1941053, Must ensure UICC_LISTEN_TECH_MASK=0x07 for setABFListenTechMask api
+#UICC_LISTEN_TECH_MASK=0x03
+#//disable type F
+
+###############################################################################
+# Force P2P to only listen for the following technology(s).
+# The bits are defined as tNFA_TECHNOLOGY_MASK in nfa_api.h.
+# Default is NFA_TECHNOLOGY_MASK_A | NFA_TECHNOLOGY_MASK_F |
+#            NFA_TECHNOLOGY_MASK_A_ACTIVE | NFA_TECHNOLOGY_MASK_F_ACTIVE
+#
+# Notable bits:
+# NFA_TECHNOLOGY_MASK_A	            0x01    /* NFC Technology A             */
+# NFA_TECHNOLOGY_MASK_F	            0x04    /* NFC Technology F             */
+# NFA_TECHNOLOGY_MASK_A_ACTIVE      0x40    /* NFC Technology A active mode */
+# NFA_TECHNOLOGY_MASK_F_ACTIVE      0x80    /* NFC Technology F active mode */
+P2P_LISTEN_TECH_MASK=0xC0
+#//disable P2P F_passive_Listen(P2P A_passive_Listen for Mifare POS)
+
+###############################libnfc-nxp.conf################################################
+# Force ESE to only listen to the following technology(s).
+# The bits are defined as tNFA_TECHNOLOGY_MASK in nfa_api.h.
+# Default is NFA_TECHNOLOGY_MASK_A | NFA_TECHNOLOGY_MASK_B | NFA_TECHNOLOGY_MASK_F
+# 1941053, Must ensure NXP_ESE_LISTEN_TECH_MASK=0x07 for setABFListenTechMask api
+#NXP_ESE_LISTEN_TECH_MASK=0x03
+#//disable type F
+
+###############################################################################
+#NXP_CN_TRANSIT_BLK_NUM_CHECK_ENABLE
+#Enable/Disable block number checks for china transit use case
+#Enable  0x01
+#Disable  0x00
+NXP_CN_TRANSIT_BLK_NUM_CHECK_ENABLE=0x00
+
+####################################################################
+NXP_RF_CONF_BLK_2={
+	      20,   02,   CC,   01,
+          A0,   34,   C8,   23,   04,   3D,   01,   02,   19,   9C,   03,   00,   00,   3E,   04,   00,   00,   FD,   04,   00,   00,   DD,   05,   00,   00,   E4,   06,   00,   00,   1A,   08,   00,   00,   85,   09,   00,   00,   EC,   07,   00,   00,   0A,   0A,   00,   00,   B7,   0C,   00,   00,   1B,   10,   00,   00,   67,   14,   00,   00,   D9,   19,   00,   00,   BE,   20,   00,   00,   7A,   29,   00,   00,   8B,   34,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   04,   19,   9C,   03,   00,   00,   3E,   04,   00,   00,   FD,   04,   00,   00,   DD,   05,   00,   00,   E4,   06,   00,   00,   1A,   08,   00,   00,   85,   09,   00,   00,   EC,   07,   00,   00,   0A,   0A,   00,   00,   B7,   0C,   00,   00,   1B,   10,   00,   00,   67,   14,   00,   00,   D9,   19,   00,   00,   BE,   20,   00,   00,   7A,   29,   00,   00,   8B,   34,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00,   F5,   37,   00,   00
+
+}
+
+# 2021-10-12 add : A1, 35, 01, 0A (default value :0x00; fix issue ¡êo0A)
+# fix:                  Mifare Write cmd , after receiver ACK  ,Reader send REQA/WUPA quickly, card cannot respons
+#Add pharse auto function control:A0,   28,   26,   03,   00,   00,   00,   CB  2021-06-02 added by LiuWenJie
+#register addr :A0,   28,   26 ;
+# 03 -->Field On ,mobile reply REQA count£¬set ->00£¬disable this function
+# 00 -->Field On ,mobile reply REQB count£¬set ->00£¬disable this function
+# 00 -->Field On ,mobile reply REQF count£¬set ->00£¬disable this function
+# 00 -->Field On ,14443-4 reply NAK count£¬set ->00£¬disable this function
+# CB -->11001011 8bit set 1 mean loop set phase , 7bit set 1 enable NCI log;  1011 mean 11 array phase
+#00B4(45¡ã,FDT default)
+#FF10(-60¡ã,FDT default)
+#02D0(180¡ã,FDT default)
+#0384(225¡ã,FDT default)
+#01E0(120¡ã,FDT default)
+#0000(0¡ã,FDT 7C)
+#0000(0¡ã,FDT 80)
+#00B4(45¡ã,FDT 7C)
+#00B4(45¡ã,FDT 80)
+#FF10(-60¡ã,FDT 7C)
+#FF10(-60¡ã,FDT 80)
+OPLUS_CONF_EXTN={
+	      20,   02,   89,   0B,
+	      A1,   0E,   02,   60,   00,
+	      A1,   35,   01,   00,
+	      A0,   85,   04,   58,   08,   A8,   AC,
+	      A0,   6A,   10,   B4,   00,   B4,   00,   B4,   00,   B4,   00,   1C,   02,   1C,   02,   1C,   02,   1C,   02,
+	      A0,   9E,   0C,   07,   31,   0B,   64,   00,   64,   00,   2B,   96,   00,   00,   00,
+	      A0,   0D,   06,   82,   82,   4F,   80,   00,   00,
+	      A0,   0D,   06,   80,   82,   4F,   80,   00,   00,
+	      A0,   0D,   06,   62,   32,   0E,   00,   7F,   00,
+	      A0,   0D,   06,   67,   32,   0E,   00,   1F,   00,
+	      A0,   0D,   06,   80,   7D,   A0,   00,   96,   BF,
+	      A0,   28,   26,   00,   00,   00,   00,   00,
+	      B4,   00,   00,   10,   FF,   00,   D0,   02,   00,   84,   03,   00,   E0,   01,    00,
+	      00,   00,   7C,   00,   00,   80,   B4,   00,   7C,   B4,   00,   80,   10,   FF,    7C,   10,   FF,   80
+}
+##############################NEED THIS LINE TO END FILE#####################################

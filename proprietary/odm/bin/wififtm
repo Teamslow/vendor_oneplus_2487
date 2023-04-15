@@ -1,0 +1,36 @@
+#!/vendor/bin/sh
+i=0
+retryTimes=6
+retryLoadFtmMode(){
+while((i < retryTimes))
+do
+    sleep 0.5
+    var=$(cat /sys/module/qca6490/parameters/con_mode)
+    if [ $var -eq 5 ]
+    then
+        echo "wififtm load wlan ftm mode success:$i" > /dev/kmsg
+        break
+    else
+        i=$(($i+1))
+        echo "wififtm retry to load wlan ftm mode:$i" > /dev/kmsg
+        echo 5 > /sys/module/qca6490/parameters/con_mode
+    fi
+done
+}
+
+insmod vendor/lib/modules/qca_cld3_qca6490.ko
+sleep 1
+ifconfig wlan0 up
+sleep 9
+echo "wififtm start to load wlan ftm mode" > /dev/kmsg
+echo 5 > /sys/module/qca6490/parameters/con_mode
+retryLoadFtmMode
+sleep 5
+/vendor/bin/myftm -J -I 0 -B dbs
+sleep 2
+/vendor/bin/myftm -J -I 0 --nss 1 --rateBw 8 -r 26 -f 5180 -a 1 -X 00:03:7F:44:55:69 -Y 00:03:7F:44:55:68 -N 00:03:7F:44:55:71 -x 1
+sleep 2
+/vendor/bin/myftm -J -I 0 --nss 1 --rateBw 8 -r 26 -f 5180 -a 1 -X 00:03:7F:44:55:69 -Y 00:03:7F:44:55:68 -N 00:03:7F:44:55:71 -x 0
+
+ftmdaemon -n -dd
+

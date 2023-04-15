@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<filter-conf>
+    <version>20221215</version>
+    <toggle>1</toggle>
+    <features>
+        <feature name="BindCore" enable="1">
+            <!-- big core index, start from 0 -->
+            <bigcore_id>4</bigcore_id>
+            <bigcore_id>5</bigcore_id>
+            <bigcore_id>6</bigcore_id>
+            <bigcore_id>7</bigcore_id>
+        </feature>
+
+        <feature name="OplusDEE" enable="1">
+            <!-- <DC>enable</DC> -->
+            <application name="com.coloros.video">
+                <scene type="Application">
+                    <action>
+                        <mode>AD</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.oplus.camera">
+                <scene type="Application">
+                    <action>
+                        <mode>AD</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.coloros.gallery3d">
+                <scene type="Application">
+                    <action>
+                        <mode>AD</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.oneplus.gallery">
+                <scene type="Application">
+                    <action>
+                        <mode>AD</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.heytap.yoli">
+                <scene type="Application">
+                    <action>
+                        <mode>AD</mode>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+
+        <feature name="DispKeventThread" enable="1"/>
+
+        <feature name="hecate" enable="1"/>
+
+        <feature name="OplusFingerPrint" enable="1">
+            <backlight>0.0004 0.0388 0.0539 0.0730 0.0825 0.1071 0.1335 0.1719 0.1905 0.2187 0.2517 0.2821 0.3100 0.3486 0.3841 0.4239 0.4511 0.4983 0.5349 0.5711 0.6101 0.6403 0.6699 0.6982 0.7353 0.8</backlight>
+            <alpha>0.95 0.92 0.916 0.91 0.90 0.88 0.867 0.847 0.844 0.820 0.795 0.753 0.711 0.673 0.623 0.582 0.552 0.520 0.477 0.426 0.385 0.365 0.343 0.309 0.25 0.19</alpha>
+        </feature>
+
+        <feature name="curtain" enable="1">
+            <application name="com.tencent.qqlive">
+                <scene type="FuzzyLayer">
+                    <layer>VideoDetailActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.youku.phone">
+                <scene type="FuzzyLayer">
+                    <layer>DetailActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="tv.danmaku.bili">
+                <scene type="FuzzyLayer">
+                    <layer>VideoDetailsActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>LiveRoomActivityV3</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>BangumiDetailActivityV3</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>StoryVideoActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.google.android.youtube">
+                <scene type="FuzzyLayer">
+                    <layer>SurfaceView[com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity]</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>SurfaceView[com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity]</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+
+        <![CDATA[
+        <feature name="osie" enable="1">
+            <!-- HQV start -->
+            <!-- 腾讯视频 -->
+            <application name="com.tencent.qqlive">
+                <scene type="Application">
+                    <action>
+                        <mode>HQV</mode>
+                    </action>
+                </scene>
+            </application>
+            <!-- bili -->
+            <application name="tv.danmaku.bili">
+                <scene type="Application">
+                    <action>
+                        <mode>HQV</mode>
+                    </action>
+                </scene>
+            </application>
+            <!-- youku视频 -->
+            <application name="com.youku.phone">
+                <scene type="Application">
+                    <action>
+                        <mode>HQV</mode>
+                    </action>
+                </scene>
+            </application>
+            <!-- 斗鱼 -->
+            <application name="air.tv.douyu.android">
+                <scene type="Application">
+                    <action>
+                        <mode>HQV</mode>
+                    </action>
+                </scene>
+            </application>
+            <!-- 芒果tv -->
+            <application name="com.hunantv.imgo.activity">
+                <scene type="Application">
+                    <action>
+                        <mode>HQV</mode>
+                    </action>
+                </scene>
+            </application>
+            <!-- HQV end -->
+            <!-- osie start -->
+            <!-- 快手 -->
+            <application name="com.smile.gifmaker">
+                <scene type="Application">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.profile.activity.UserProfileActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <layer>com.yxcorp.gifshow.profile.activity.UserProfileActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>2</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>2</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.HomeActivity</layer>
+                    <layer>com.yxcorp.gifshow.profile.activity.MyProfileActivity</layer>
+                    <layer>com.yxcorp.gifshow.detail.PhotoDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>2</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.yxcorp.gifshow.activity.ReviewActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+            </application>
+            <!-- 微信 -->
+            <application name="com.tencent.mm">
+                <scene type="ExactLayer">
+                    <layer>com.tencent.mm</layer>
+                    <layer>ui.SnsOnlineVideoActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.36,0.00885,0.0285,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.mm.plugin.finder.ui.FinderHomeUI</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.36,0.00885,0.0285,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.mm.plugin.finder.ui.FinderShareFeedRelUI</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.36,0.00885,0.0285,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+            </application>
+            <!-- 抖音 -->
+            <application name="com.ss.android.ugc.aweme">
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.splash.SplashActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.68,0.01885,0.0685,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <layer>PopupWindow</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.splash.SplashActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.splash.SplashActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.68,0.01885,0.0685,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.detail.ui.LiveDetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.LiveDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.68,0.01885,0.0685,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.music.ui.MusicDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.68,0.01885,0.0685,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <!-- scenes for old app version -->
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.68,0.01885,0.0685,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.profile.ui.UserProfileActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.discover.activity.SearchResultActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.music.ui.MusicDetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.music.ui.MusicDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.music.ui.MusicDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.newfollow.ui.VideoFollowFeedDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.discover.activity.SearchResultActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.newfollow.ui.VideoFollowFeedDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.profile.ui.UserProfileActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.newfollow.ui.VideoFollowFeedDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.main.MainActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.newfollow.ui.VideoFollowFeedDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>2</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.shortvideo.ui.VideoPublishActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.shortvideo.ui.VideoPublishPreviewActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme</layer>
+                    <layer>com.ss.android.ugc.aweme</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>2</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme</layer>
+                    <layer>com.ss.android.ugc.aweme.discover.hotspot.HotSpotDetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.discover.hotspot.HotSpotDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.discover.hotspot.HotSpotDetailActivity</layer>
+                    <layer>com.ss.android.ugc.aweme.discover.hotspot.HotSpotDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme.live.LivePlayActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.detail.ui.DetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,0.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+            </application>
+            <!-- 微视 -->
+            <application name="com.tencent.weishi">
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.material.MaterialDetailActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.feed.FeedActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.feed.FeedActivity</layer>
+                    <layer>com.tencent.oscar.module.main.feed.FeedActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>Toast</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>Toast</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <layer>com.tencent.oscar.module.main.MainActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>SurfaceView - com.tencent.weishi</layer>
+                    <layer>com.tencent.ttpic.qzcamera.plugin.VideoLiteEditorActivity</layer>
+                    <action>
+                        <mode>DPP</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                        <parameter>0.88,0.00885,0.0785,0.5,1.5,0.0,0.0,0.0</parameter>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+        ]]>
+    </features>
+</filter-conf>

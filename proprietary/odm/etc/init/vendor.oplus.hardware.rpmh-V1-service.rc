@@ -1,0 +1,5 @@
+service oplus.rpmh.hal.service-1-0 /odm/bin/hw/vendor.oplus.hardware.rpmh-V1-service
+    class main
+    user system
+    group system
+    interface aidl vendor.oplus.hardware.rpmh.IRpmh/default

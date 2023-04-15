@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <filter-conf>
+  <version>20220301</version>
+  <filter-name>multimedia_pixelworks_game_apps</filter-name>
+    <!-- config file:<link>https://odocs.myoas.com/files/8Nk6Mw6pMZFBOVqL/</link> -->
+    <!--Config package sdr2hdr-->
+    <mConfigPackage  type="267-3-0">com.tencent.tmgp.speedmobile</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.tencent.tmgp.sgame</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.tencent.tmgp.pubgmhd</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.miHoYo.Yuanshen</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.tencent.lolm</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.mobile.legends</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.dts.freefireth</mConfigPackage>
+    <mConfigPackage  type="267-3-0">com.pubg.imobile</mConfigPackage>
+
+    <!--Config activity switch callback MEMC -->
+    <!--"type-index0-index1-index2-index3-index4-index5" : index1,3,4 value>=9 means use default config -->
+    <!--internal apps -->
+    <mConfigActivity type="258-10-99-2-99-0-60">com.tencent.tmgp.speedmobile/com.tencent.tmgp.speedmobile.speedmobile</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-60">com.tencent.tmgp.sgame/com.tencent.tmgp.sgame.SGameActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-60">com.tencent.tmgp.pubgmhd/com.epicgames.ue4.GameActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-45">com.miHoYo.Yuanshen/com.miHoYo.GetMobileInfo.MainActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-45">com.miHoYo.ys.bilibili/com.miHoYo.GetMobileInfo.MainActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-60">com.tencent.lolm/com.tencent.lolm.lgame</mConfigActivity>
+    <!--overseas apps -->
+    <mConfigActivity type="258-10-99-2-99-0-60">com.mobile.legends/com.moba.unityplugin.MobaGameUnityActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-60">com.dts.freefireth/com.dts.freefireth.FFMainActivity</mConfigActivity>
+    <mConfigActivity type="258-10-99-2-99-0-60">com.pubg.imobile/com.epicgames.ue4.GameActivity</mConfigActivity>
+  </filter-conf>

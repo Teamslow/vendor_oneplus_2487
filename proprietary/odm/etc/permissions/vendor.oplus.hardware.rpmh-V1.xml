@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<permissions>
+    <library name="vendor.oplus.hardware.rpmh-V1"
+          file="/system/framework/vendor.oplus.hardware.rpmh-V1-java.jar"/>
+</permissions>
+

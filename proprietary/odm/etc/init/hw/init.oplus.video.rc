@@ -1,0 +1,13 @@
+on property:debug.qcom.video.log.switch=On
+    setprop vendor.qc2.log.msg 0xFF0000FF
+    write /sys/module/msm_video/parameters/msm_vidc_debug 0x103F133F
+
+on property:debug.qcom.video.log.switch=Off
+    setprop vendor.qc2.log.msg 0
+    write /sys/module/msm_video/parameters/msm_vidc_debug 0x10181001
+
+on property:debug.oplus.video.log.switch=On
+    setprop debug.oplus.video.log.enable 1
+
+on property:debug.oplus.video.log.switch=Off
+    setprop debug.oplus.video.log.enable 0

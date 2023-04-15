@@ -1,0 +1,7 @@
+{
+    "up_limit":-45,
+    "down_limit":45,
+    "up_to_mid_limit":-30,
+    "down_to_mid_limit":30,
+	"sum_min_limit":140
+}

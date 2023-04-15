@@ -1,0 +1,11 @@
+on post-fs-data
+    restorecon /sys/pmic_info/poff_reason
+    restorecon /sys/pmic_info/pon_reason
+    start clear_pmic_history
+
+service clear_pmic_history /system_ext/bin/PmicHistoryClear
+    class core
+    user root
+    disabled
+    oneshot
+

@@ -1,0 +1,15 @@
+# File: sxr.rc
+#
+# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+on post-fs-data
+    mkdir /data/vendor/sxr 0770 system system
+
+# Shawn Liu@Multimedia.display.863163, 2021/11/04, Remove qvrservice to reduce boot memory
+# Add sxrservice socket for sxrservice
+#service sxrd /vendor/bin/hw/sxrservice
+#   class late_start
+#   user system
+#   group system camera graphics inet usb

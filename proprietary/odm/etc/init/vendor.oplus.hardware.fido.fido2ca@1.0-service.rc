@@ -1,0 +1,22 @@
+##/*************************************************************
+## ** File: - vendor.oplus.hardware.fido.fido2ca@1.0-service.rc
+## ** OPLUS_FEATURE_FINGERPRINTPAY
+## ** Copyright (C), 2016-2020, oplus Mobile Comm Corp., Ltd
+## **
+## ** Description : 1.0
+## **           This is a common file
+## **
+## ** Version: 1.0
+## ** Date created: 11:00, 2022/4/7
+## ** Author: Bin.Lv@BSP.Security.Basic
+## **
+## ** ------------------ Revision History: ---------------------
+## **      <author>              <date>                    <desc>
+## **     Bin.Lv        17:00, 2022/4/7           add for fido2.
+## *************************************************************/
+
+
+service fido2ca /odm/bin/hw/vendor.oplus.hardware.fido.fido2ca@1.0-service
+    class late_start
+    user system
+    group system input sdcard_rw sdcard_r

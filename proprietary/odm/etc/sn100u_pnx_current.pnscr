@@ -1,0 +1,35 @@
+version
+interval 200
+reset 1
+
+// NCI CORE RESET CMD
+send 20000100
+receive
+// NCI CORE INIT CMD
+send 2001020000
+// ENABLE PROPRIETARY CMD
+send 2F0200
+
+// DISABLE STANDBY
+send 2F000100
+// Start CONTINUOUS RF ON 
+send 2F3F03320100
+
+//set trigger ,wait for :next RX NCI
+trigger 4F3203
+
+// Read TX current on VDDPA in mA (CURRENT = VALUE + 20mA)
+send 2F320108
+
+// Read VDDPA voltage in mV (VDDPA voltage = VALUE + 200mV)
+//send 2F32010D
+
+
+
+// Read VBAT voltage in mV (VBAT voltage = VALUE)
+//send 2F32010B
+
+//sleep 12000
+
+// Stop CONTINUOUS RF ON 
+send 2F3F03320000

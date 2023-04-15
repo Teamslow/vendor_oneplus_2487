@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<!--Copyright 2019-2021 (c) Pixelworks Inc. All Rightes Reserved.
+Pixelworks Inc. Company Confidential Strictly Private-->
+<SoftIrisData>
+
+<Information Version="220" />
+
+<!--multiple brightness-->
+<GamutBlend Id="0" Type="10">
+	<BlendCurve Id="0" MaxLevel="8191" BrightnessMode="3">
+		<Point Level="0">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="0" />
+			<SubGamut Index="2" Percentage="100" />
+		</Point>
+		<Point Level="500">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="0" />
+			<SubGamut Index="2" Percentage="100" />
+		</Point>
+		<Point Level="2500">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="100" />
+			<SubGamut Index="2" Percentage="0" />
+		</Point>
+		<Point Level="4334">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="100" />
+			<SubGamut Index="2" Percentage="0" />
+		</Point>
+		<Point Level="8191">
+			<SubGamut Index="0" Percentage="100" />
+			<SubGamut Index="1" Percentage="0" />
+			<SubGamut Index="2" Percentage="0" />
+		</Point>
+	</BlendCurve>
+	<BlendCurve Id="1" MaxLevel="100000" BrightnessMode="5">
+		<Point Level="0">
+			<SubGamut Curve="0" Percentage="100" />
+			<SubGamut Index="3" Percentage="0" />
+		</Point>
+		<Point Level="50000">
+			<SubGamut Curve="0" Percentage="100" />
+			<SubGamut Index="3" Percentage="0" />
+		</Point>
+		<Point Level="100000">
+			<SubGamut Curve="0" Percentage="0" />
+			<SubGamut Index="3" Percentage="100" />
+		</Point>
+	</BlendCurve>
+</GamutBlend>
+
+<!--APL HDR-->
+<GamutBlend Id="1" Type="10" Index="9">
+	<BlendCurve Id="0" MaxLevel="100" BrightnessMode="7">
+		<Point Level="0">
+			<SubGamut Index="0" Percentage="100" />
+			<SubGamut Index="1" Percentage="0" />
+		</Point>
+		<Point Level="20">
+			<SubGamut Index="0" Percentage="80" />
+			<SubGamut Index="1" Percentage="20" />
+		</Point>
+		<Point Level="50">
+			<SubGamut Index="0" Percentage="50" />
+			<SubGamut Index="1" Percentage="50" />
+		</Point>
+		<Point Level="100">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="100" />
+		</Point>
+	</BlendCurve>
+</GamutBlend>
+
+<!--APL HDR-->
+<GamutBlend Id="2" Type="10" Index="10">
+	<BlendCurve Id="0" MaxLevel="100" BrightnessMode="7">
+		<Point Level="0">
+			<SubGamut Index="0" Percentage="100" />
+			<SubGamut Index="1" Percentage="0" />
+		</Point>
+		<Point Level="20">
+			<SubGamut Index="0" Percentage="80" />
+			<SubGamut Index="1" Percentage="20" />
+		</Point>
+		<Point Level="50">
+			<SubGamut Index="0" Percentage="50" />
+			<SubGamut Index="1" Percentage="50" />
+		</Point>
+		<Point Level="100">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="100" />
+		</Point>
+	</BlendCurve>
+</GamutBlend>
+
+<!--APL HDR-->
+<GamutBlend Id="3" Type="10" Index="11">
+	<BlendCurve Id="0" MaxLevel="100" BrightnessMode="7">
+		<Point Level="0">
+			<SubGamut Index="0" Percentage="100" />
+			<SubGamut Index="1" Percentage="0" />
+		</Point>
+		<Point Level="20">
+			<SubGamut Index="0" Percentage="80" />
+			<SubGamut Index="1" Percentage="20" />
+		</Point>
+		<Point Level="50">
+			<SubGamut Index="0" Percentage="50" />
+			<SubGamut Index="1" Percentage="50" />
+		</Point>
+		<Point Level="100">
+			<SubGamut Index="0" Percentage="0" />
+			<SubGamut Index="1" Percentage="100" />
+		</Point>
+	</BlendCurve>
+</GamutBlend>
+
+</SoftIrisData>
